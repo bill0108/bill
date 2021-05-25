@@ -1,0 +1,11 @@
+<h1>Blogs#index</h1>
+
+<p>Find me in app/views/blogs/index.html.erb</p>
+
+<div class="jumbotron" >
+<h1><%= link_to "my blog", new_blog_path %> </h1> 
+ <% @blog.each do |blog| %>
+<h2> <%= link_to blog.title, blog_path(blog.id) %> </h2>
+<% end %>
+<%= link_to "Create Blog", "/blogs/new", class: "btn btn-danger btn-lg btn-xlarge" %>
+</div>
